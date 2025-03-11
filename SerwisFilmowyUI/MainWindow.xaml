@@ -1,0 +1,118 @@
+﻿<Window x:Class="SerwisFilmowyUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SerwisFilmowyUI"
+        mc:Ignorable="d"
+        Title="Serwis Filmowy" Height="540" Width="960" Background="#FF24282B">
+
+    <!--Main Grid-->
+    <Grid Margin="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.2*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="0.2*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.35*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!--Grid Main Content-->
+        <Grid Grid.Column="1" Grid.RowSpan="2" Margin="0">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.12*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Row="0" Orientation="Horizontal" FlowDirection="RightToLeft">
+                <Ellipse Fill="Red" Height="20" Width="20" Margin="5,0,5,0" Cursor="Hand"/>
+                <Ellipse Fill="Yellow" Height="20" Width="20" Cursor="Hand"/>
+            </StackPanel>
+
+            <Grid Grid.Row="1" Margin="50,0,50,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0.15*"/>
+                        <RowDefinition Height="0.25*"/>
+                        <RowDefinition Height="0.15*"/>
+                        <RowDefinition Height="0.25*"/>
+                        <RowDefinition Height="0.15*"/>
+                        <RowDefinition Height="0.25*"/>
+                        <RowDefinition Height="0.15*"/>
+                        <RowDefinition Height="0.25*"/>
+                    </Grid.RowDefinitions>
+
+                    <Label Grid.Row="0" Content="- Tytuł -" Foreground="White" FontSize="12" Padding="0" HorizontalContentAlignment="Center" Background="Black" VerticalContentAlignment="Center"/>
+                    <Label Grid.Row="1" Content="Oppenheimer" Foreground="White" FontSize="18" FontWeight="Bold" FontFamily="Arial" Padding="0" HorizontalContentAlignment="Center" Background="#FF373737" VerticalContentAlignment="Center"/>
+                    <Label Grid.Row="2" Content="- Rok produkcji -"  Foreground="White" FontSize="12" Padding="0" HorizontalContentAlignment="Center" Background="Black" VerticalContentAlignment="Center"/>
+                    <Label Grid.Row="3" Content="2023" Foreground="White" FontSize="18" FontWeight="Bold" FontFamily="Arial" Padding="0" HorizontalContentAlignment="Center" Background="#FF373737" VerticalContentAlignment="Center"/>
+                    <Label Grid.Row="4" Content="- Reżyser -"  Foreground="White" FontSize="12" Padding="0" HorizontalContentAlignment="Center" Background="Black" VerticalContentAlignment="Center"/>
+                    <Label Grid.Row="5" Content="Christopher Nolan" Foreground="White" FontSize="18" FontWeight="Bold" FontFamily="Arial" Padding="0" HorizontalContentAlignment="Center" Background="#FF373737" VerticalContentAlignment="Center"/>
+                    <Label Grid.Row="6" Content="- Obsada -"  Foreground="White" FontSize="12" Padding="0" HorizontalContentAlignment="Center" Background="Black" VerticalContentAlignment="Center"/>
+                    <Label Grid.Row="7" Content="Cillian Murphy, Emily Blunt" Foreground="White" FontSize="18" FontWeight="Bold" FontFamily="Arial" Padding="0" Background="#FF373737" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                </Grid>
+
+                <Border Background="Black">
+                    <Image Grid.Column="0" Source="D:\Nowy folder\Oppek.JPG"/>
+                </Border>
+
+            </Grid>
+
+            <Border Grid.Row="5" Margin="20,10,20,0" CornerRadius="10" Background="#FF373737">
+                <TextBlock  Text='Oppenheimer w czasie II wojny światowej był dyrektorem programu rozwoju broni jądrowej "Manhattan".  Poza działalnością związaną z bronią atomową Oppenheimer miał ogromne osiągnięcia w innych dziedzinach fizyki, między innymi w badaniach czarnych dziur oraz promieniowania kosmicznego. Resztę życia po opracowaniu bomby atomowej poświęcił na działalność na rzecz ograniczania rozprzestrzeniania się broni jądrowej. Był oskarżany przez amerykański rząd i służby o powiązania z ruchem komunistycznym oraz działalność szpiegowską.
+&#x0a;&#x0a;W latach 50. został pozbawiony dostępu do tajnych dokumentów. Dopiero prezydent Kennedy dokonał jego politycznej rehabilitacji. Oppenheimer jest dziś uznawany za jeden z symboli pacyfizmu i sprzeciwu wobec rozprzestrzeniania broni atomowej.' Foreground="White" TextWrapping="Wrap" TextAlignment="Justify" Margin="10"/>
+
+            </Border>
+
+
+        </Grid>
+
+        <!--Grid Left Corner-->
+        <Grid Grid.Column="0" Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button Style="{DynamicResource ButtonMain}" Grid.Column="0" Grid.Row="0" Margin="10,20,5,20" Content="Dodaj" Foreground="White" FontWeight="Bold" FontSize="14" FontFamily="Arial" Cursor="Hand"/>
+            <Button Style="{DynamicResource ButtonMain}" Grid.Column="1" Grid.Row="0" Margin="5,20,10,20" Content="Usuń" IsEnabled="False"  Foreground="White" FontWeight="Bold" FontSize="14" FontFamily="Arial" Cursor="Hand"/>
+            
+        </Grid>
+
+        <Border BorderBrush="Black" CornerRadius="10" BorderThickness="0" VerticalAlignment="Center" Background="#000814" Margin="10,0,10,0">
+            <Grid >
+            <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBox Style="{DynamicResource TextBoxMain}" Grid.Column="0" Grid.Row="0" Text="Szukaj" FontSize="16" TextAlignment="Left" FontStyle="Italic" Foreground="White" FontFamily="Arial" FontWeight="Medium" BorderBrush="#000814" BorderThickness="1" Background="#003554" Padding="5,3,0,3" VerticalContentAlignment="Center" Cursor="IBeam"/>
+            <Image Grid.Column="1" Grid.Row="0" Source="D:\Nowy folder\search2.png" Margin="5,0,5,0" Height="20" Cursor="Hand"/>
+            </Grid>
+        </Border>
+
+        <ListBox Style="{DynamicResource ListBoxMain}" Grid.Row="1" Grid.Column="0" Margin="10,0,10,0" BorderThickness="3" Background="#003554" HorizontalContentAlignment="Center" FontSize="14" FontWeight="Bold" FontFamily="Arial" Foreground="White" Padding="0,10,0,10" ScrollViewer.VerticalScrollBarVisibility="Hidden" ScrollViewer.HorizontalScrollBarVisibility="Hidden" Cursor="Hand">
+            <ListBoxItem>Oppenheimer</ListBoxItem>
+        </ListBox>
+
+        <Grid Grid.Row="2" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="0.3*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button Style="{DynamicResource ButtonMain}" Grid.Column="1" Margin="10,20,10,20" Content="Edytuj"  Foreground="White" FontWeight="Bold" FontSize="14" FontFamily="Arial" Cursor="Hand"/>
+
+        </Grid>
+
+    </Grid>
+</Window>

@@ -1,0 +1,88 @@
+﻿<Window x:Class="SerwisFilmowyUI.Create"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SerwisFilmowyUI"
+        mc:Ignorable="d"
+        Title="Serwis Filmowy" Height="540" Width="960" Background="#FF24282B">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.5*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="0.15*"/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.Row="0" Grid.RowSpan="3" Background="#FF191919"/>
+
+        <Grid Grid.Row="0" Grid.Column="0" Margin="0,0,0,25">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Label Grid.Row="0" Content="- Tytuł -" Foreground="White" FontSize="12" Padding="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Style="{DynamicResource TextBoxMain}" Grid.Column="0" Grid.Row="1" FontSize="16" TextAlignment="Left" FontStyle="Italic" Foreground="White" FontFamily="Arial" FontWeight="Medium" BorderBrush="#000814" BorderThickness="1" Background="#003554" Padding="5,3,0,3" VerticalContentAlignment="Center" Cursor="IBeam" HorizontalContentAlignment="Center" Margin="20,0,20,0"/>
+            <Label Grid.Row="2" Content="- Rok produkcji -" Foreground="White" FontSize="12" Padding="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Style="{DynamicResource TextBoxMain}" Grid.Column="0" Grid.Row="3" FontSize="16" TextAlignment="Left" FontStyle="Italic" Foreground="White" FontFamily="Arial" FontWeight="Medium" BorderBrush="#000814" BorderThickness="1" Background="#003554" Padding="5,3,0,3" VerticalContentAlignment="Center" Cursor="IBeam" HorizontalContentAlignment="Center" Margin="20,0,20,0"/>
+            <Label Grid.Row="4" Content="- Reżyser -" Foreground="White" FontSize="12" Padding="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Style="{DynamicResource TextBoxMain}" Grid.Column="0" Grid.Row="5" FontSize="16" TextAlignment="Left" FontStyle="Italic" Foreground="White" FontFamily="Arial" FontWeight="Medium" BorderBrush="#000814" BorderThickness="1" Background="#003554" Padding="5,3,0,3" VerticalContentAlignment="Center" Cursor="IBeam" HorizontalContentAlignment="Center" Margin="20,0,20,0"/>
+            <Label Grid.Row="6" Content="- Obsada -" Foreground="White" FontSize="12" Padding="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Style="{DynamicResource TextBoxMain}" Grid.Column="0" Grid.Row="7" FontSize="16" TextAlignment="Left" FontStyle="Italic" Foreground="White" FontFamily="Arial" FontWeight="Medium" BorderBrush="#000814" BorderThickness="1" Background="#003554" Padding="5,3,0,3" VerticalContentAlignment="Center" Cursor="IBeam" HorizontalContentAlignment="Center" Margin="20,0,20,0"/>
+        </Grid>
+
+        <Grid Grid.Row="0" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.12*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Row="0" Orientation="Horizontal" FlowDirection="RightToLeft">
+                <Ellipse Fill="Red" Height="20" Width="20" Margin="5,0,5,0" Cursor="Hand"/>
+                <Ellipse Fill="Yellow" Height="20" Width="20" Cursor="Hand"/>
+            </StackPanel>
+
+
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.2*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Label Grid.Row="0" Content="- Opis -" Foreground="White" FontSize="12" Padding="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                <TextBox Style="{DynamicResource TextBoxMain}" Grid.Column="0" Grid.Row="1" FontSize="16" TextAlignment="Left" FontStyle="Italic" Foreground="White" FontFamily="Arial" FontWeight="Medium" BorderBrush="#000814" BorderThickness="1" Background="#003554" Padding="5,3,0,3" VerticalContentAlignment="Center" Cursor="IBeam" HorizontalContentAlignment="Center" Margin="20,0,20,0" TextWrapping="Wrap"/>
+            </Grid>
+
+            <Rectangle Grid.Row="2" Fill="#FF191919" Margin="200,50,200,50"/>
+            <Label Grid.Row="2" Content="Nie wybrano zdjęcia." Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+
+        </Grid>
+
+        <Grid Grid.Column="1" Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button Style="{DynamicResource ButtonMain}" Grid.Column="0" Grid.Row="0" Margin="25,10,125,10" Content="Wczytaj zdjęcie"  Foreground="White" FontWeight="Bold" FontSize="14" FontFamily="Arial" Cursor="Hand"/>
+            <Button Style="{DynamicResource ButtonMain}" Grid.Column="1" Grid.Row="0" Margin="150,10,25,10" Content="Zapisz"  Foreground="White" FontWeight="Bold" FontSize="14" FontFamily="Arial" Cursor="Hand"/>
+
+        </Grid>
+
+
+        <Button Style="{DynamicResource ButtonMain}" Grid.Column="0" Grid.Row="2" Margin="25,10,150,10" Content="Wstecz"  Foreground="White" FontWeight="Bold" FontSize="14" FontFamily="Arial" Cursor="Hand"/>
+
+    </Grid>
+</Window>
